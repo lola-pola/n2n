@@ -1,7 +1,7 @@
 # n2n
 n2n
 
-![server client](images/n2n.png)
+![server client](images/n2n_com.png)
 ![client client ](images/n2n_network.png)
 
 
