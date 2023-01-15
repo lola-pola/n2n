@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: n2n
+  labels:
+    k8s-app: n2n
+spec:
+  selector:
+    matchLabels:
+      name: n2n
+  template:
+    metadata:
+      labels:
+        name: n2n
+    spec:
+      securityContext:
+        runAsUser: 0
+      hostNetwork: true
+      containers:
+      - name: n2n
+        image: elhays/n2n-all-in-one
+        command: [ "tail", "-f", "/dev/null" ]
+
