@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: n2n-server
   labels:
-    app: nginx
+    app: n2n-server
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: n2n-server
   template:
     metadata:
       labels:
-        app: nginx
+        app: n2n-server
     spec:
       securityContext:
         runAsUser: 0
       hostNetwork: true
       containers:
-      - name: nginx
+      - name: n2n-server
         image: elhays/n2n-all-in-one
         command: [ "tail", "-f", "/dev/null" ]
         ports:
