@@ -7,20 +7,27 @@ n2n
 
 
 ## deploy server 
-"""" 
+```
 kubectl apply -f n2n-server.yaml
-""""
-go to server and start the server 
-supernode -l 1024 -f  
+kubectl get pods -o wide
+```
+
+```go to server and start the server 
+supernode -l 1024 -f  ```
 
 
 
 
 ## deploy client
 
-'''
-kubectl apply -f n2n.yaml
-'''
 
+```
+kubectl apply -f n2n.yaml
+kubectl get pods -o wide
+
+```
+
+```
 start the client on each 
-edge -d n2n0 -a 10.9.9.1 -c mypbxnet -k mypass -l <supernode_host>:<port>
+edge -d n2n0 -a <POD IP> -c mypbxnet -k mypass -l <supernode_host>:<port>
+```
