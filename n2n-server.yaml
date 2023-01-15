@@ -24,4 +24,3 @@ spec:
         ports:
         - containerPort: 1024
           hostPort: 1024
-          udp: true

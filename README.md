@@ -7,9 +7,9 @@ n2n
 
 
 ## deploy server 
-'''
+"""" 
 kubectl apply -f n2n-server.yaml
-'''
+""""
 go to server and start the server 
 supernode -l 1024 -f  
 
